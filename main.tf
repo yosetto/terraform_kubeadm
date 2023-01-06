@@ -1,5 +1,9 @@
 provider "aws" {
-  region  = "eu-west-2"
+  access_key = var.aws_access_key
+ secret_key = var.aws_secret_key
+ token = var.aws_api_token
+ region = var.aws_region
+ skip_credentials_validation = true
 }
 terraform {
    backend "s3" {
